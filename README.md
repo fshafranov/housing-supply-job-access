@@ -19,12 +19,18 @@ Hartford and San Juan (48 metros, 43,370 census tracts).
    the 40th, with a partial rebound in the 2010s (45th) (figure 1, table 1).
 2. **Owner single-family homes, a starter-home proxy, moved out most.** Built 2000–2019, they sit
    at the 33rd percentile; rental buildings with 20+ units of the same age at the 67th (figure 2).
+
+   ![Job access by tenure and building type](empirics/results/figures/fig2_structure.png)
+
 3. **Actual commutes say the same.** Residents of tracts with pre-1940 homes have a median
    straight-line commute of 17.1 km (LODES 2023); for 2000s homes 22.3 km. Owner single-family homes
    built 2000–2019: 25.5 km; large rentals: 15.0 km (figure 5, table 4). The 10 km access measure
    predicts actual commutes better than distance to downtown does.
 4. **New homes are farthest from new jobs in sprawling Sunbelt metros** (Phoenix, Las Vegas, San
    Antonio), and close to them in San Jose, New York and Seattle (figures 3, 4).
+
+   ![Phoenix and San Jose: share of each tract's homes built since 2000](empirics/results/figures/fig4_maps.png)
+
 5. **Near jobs, housing supply is inelastic because the land is already built up.** Using
    Baum-Snow & Han's (2024) tract supply elasticities: 0.57 in the least job-accessible tenth of
    tracts, 0.12 in the most, tracking the share of land already developed (12% to 59%), not
@@ -37,6 +43,8 @@ Hartford and San Juan (48 metros, 43,370 census tracts).
    About 70% of the rise is residents of the same tracts commuting farther; about 30% is workers
    living in far-out tracts. The second part dominates only in seven, mostly Sunbelt, metros
    (figure 9).
+
+   ![Change in mean commute 2002-2023, within and between tracts](empirics/results/figures/fig9_commute_trend.png)
 
 ## Reproduce
 
