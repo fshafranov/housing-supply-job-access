@@ -59,8 +59,11 @@ Last updated: 2026-11-23
   (`analyze_commute_trend.csv`). Tracts with over 30% of homes built since 2000 went from 0.223 to
   0.343 of workers (`analyze_commute_trend_by_newshare.csv`). Between exceeds within in 7 metros
   (Phoenix, Austin, Houston, Las Vegas, San Antonio, Riverside, Baltimore; `..._metros.csv`).
-- **Next step:** minimum-commute split (location vs matching), or decide between (a) the causal version (job-growth shocks x elasticity, proposed
-  2026-11-23), (b) literature check, (c) CSA version, (d) R6 robustness with the FMM elasticity.
+- **Package state:** git repository on `main` (6 commits), ready for GitHub; not pushed. Raw, clean
+  and processed data are git-ignored and rebuild with `run_all.py --with-collection`. Full double
+  run: 266 outputs byte-identical (audit G4). Ruff clean.
+- **Next step:** push to GitHub (user's call); then the minimum-commute split (location vs
+  matching), the causal job-shock x elasticity design, or the CSA version.
 
 ## Session history
 
@@ -123,3 +126,11 @@ Last updated: 2026-11-23
 - Succeeded: decomposition adds up exactly in every metro (asserted).
 - Key decisions: D16.
 - Commit: no-git
+
+### 2026-11-23 (wrap-up for GitHub)
+- Done: lint fixes (imports, zip strict, no behaviour change: outputs identical before/after), README
+  written, matplotlib declared and unused geopandas removed, .gitignore for data and papers, git
+  initialised with six stage commits.
+- Succeeded: audit with double run, 0 failures; 266 outputs identical across runs.
+- Not done: fresh-clone test with re-download (user declined); push to GitHub.
+- Commit: 94b30e2
