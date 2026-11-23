@@ -1,0 +1,24 @@
+notes/
+__pycache__/
+*.pyc
+.venv/
+.env
+.Rhistory
+.RData
+renv/library/
+*.part
+.DS_Store
+.ruff_cache/
+
+# Raw data: public but large (~2 GB). Re-download with `uv run python run_all.py --with-collection`;
+# checksums of the files used are in data/raw/MANIFEST.sha256. Provenance READMEs are committed.
+data/raw/*/*
+!data/raw/*/README.md
+
+# Rebuilt by the pipeline from data/raw/
+data/clean/
+data/processed/
+archive/baseline/
+
+# Literature PDFs (copyrighted; kept locally)
+papers/*.pdf
