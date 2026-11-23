@@ -59,10 +59,10 @@ Last updated: 2026-11-23
   (`analyze_commute_trend.csv`). Tracts with over 30% of homes built since 2000 went from 0.223 to
   0.343 of workers (`analyze_commute_trend_by_newshare.csv`). Between exceeds within in 7 metros
   (Phoenix, Austin, Houston, Las Vegas, San Antonio, Riverside, Baltimore; `..._metros.csv`).
-- **Package state:** git repository on `main` (6 commits), ready for GitHub; not pushed. Raw, clean
+- **Package state:** public on GitHub, https://github.com/fshafranov/housing-supply-job-access (`main`). Raw, clean
   and processed data are git-ignored and rebuild with `run_all.py --with-collection`. Full double
   run: 266 outputs byte-identical (audit G4). Ruff clean.
-- **Next step:** push to GitHub (user's call); then the minimum-commute split (location vs
+- **Next step:** the minimum-commute split (location vs
   matching), the causal job-shock x elasticity design, or the CSA version.
 
 ## Session history
@@ -134,3 +134,4 @@ Last updated: 2026-11-23
 - Succeeded: audit with double run, 0 failures; 266 outputs identical across runs.
 - Not done: fresh-clone test with re-download (user declined); push to GitHub.
 - Commit: 94b30e2
+- Pushed to https://github.com/fshafranov/housing-supply-job-access (public), 2026-11-23.
