@@ -1,0 +1,6 @@
+2026-11-23 20:32:22 [info     ] start                            script=acquire_bsh
+2026-11-23 20:32:22 [info     ] download                         file=Master_Readme_Replication.pdf script=acquire_bsh url=https://dataverse.harvard.edu/api/access/datafile/7351396
+2026-11-23 20:32:23 [info     ] download                         file=analyze_replication.zipx script=acquire_bsh url=https://dataverse.harvard.edu/api/access/datafile/7351376
+2026-11-23 20:32:31 [info     ] verified                         bytes=180088435 file=data/raw/bsh/analyze_replication.zipx format=zip script=acquire_bsh
+2026-11-23 20:32:31 [info     ] verified                         bytes=79370 file=data/raw/bsh/Master_Readme_Replication.pdf format=pdf script=acquire_bsh
+2026-11-23 20:32:31 [info     ] end                              files_verified=2 script=acquire_bsh

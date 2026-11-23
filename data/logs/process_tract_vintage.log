@@ -1,0 +1,56 @@
+2026-11-23 21:10:30 [info     ] start                            script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] shape                            cols=12 data=b25034 rows=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] shape                            cols=88 data=b25127 rows=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] shape                            cols=5 data=gazetteer rows=85395 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] shape                            cols=6 data=cbsa rows=1915 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] shape                            cols=4 data=wac rows=6709136 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] merge                            how=inner left_match_rate=1.0 left_only=0 left_rows=85381 matched_rows=85381 name=b25034_b25127 on=['tract_geoid'] right_match_rate=1.0 right_only=0 right_rows=85381 script=process_tract_vintage validate=1:1
+2026-11-23 21:10:30 [info     ] shape                            cols=98 data='b25034_b25127 result' rows=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] merge                            how=left left_match_rate=0.9298 left_only=5997 left_rows=85381 matched_rows=79384 name=tract_to_cbsa on=['county_fips'] right_match_rate=1.0 right_only=0 right_rows=1915 script=process_tract_vintage validate=m:1
+2026-11-23 21:10:30 [info     ] shape                            cols=102 data='tract_to_cbsa result' rows=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] merge                            how=left left_match_rate=0.9896 left_only=884 left_rows=85381 matched_rows=84497 name=tract_to_gazetteer on=['tract_geoid'] right_match_rate=0.9895 right_only=898 right_rows=85395 script=process_tract_vintage validate=1:1
+2026-11-23 21:10:30 [info     ] shape                            cols=105 data='tract_to_gazetteer result' rows=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] top_metros                       excluded=['San Juan-Bayamón-Caguas, PR', 'Hartford-West Hartford-East Hartford, CT'] n=50 script=process_tract_vintage smallest='Rochester, NY' smallest_units=478537
+2026-11-23 21:10:30 [info     ] attrition_start                  data='all ACS tracts' obs=85381 script=process_tract_vintage
+2026-11-23 21:10:30 [info     ] attrition                        before=85381 dropped=41092 remaining=44289 script=process_tract_vintage step='not in the 50 largest metros (D1)'
+2026-11-23 21:10:30 [info     ] attrition                        before=44289 dropped=919 remaining=43370 script=process_tract_vintage step='Connecticut or Puerto Rico metro (D2)'
+2026-11-23 21:10:30 [info     ] attrition                        before=43370 dropped=0 remaining=43370 script=process_tract_vintage step='no 2020 Gazetteer internal point'
+2026-11-23 21:10:30 [info     ] attrition_summary                dropped=42011 final=43370 script=process_tract_vintage start=85381 table='\n                                 step  before  dropped  remaining  cumulative_dropped\n                       all ACS tracts   85381        0      85381                   0\n    not in the 50 largest metros (D1)   85381    41092      44289               41092\nConnecticut or Puerto Rico metro (D2)   44289      919      43370               42011\n     no 2020 Gazetteer internal point   43370        0      43370               42011'
+2026-11-23 21:10:31 [info     ] wrote                            cols=106 file=data/processed/tract_vintage/tract_vintage_dropped.csv rows=42011 script=process_tract_vintage
+2026-11-23 21:10:31 [info     ] implausible_state_years          cells=['ar_2002', 'ma_2002', 'ma_2010'] script=process_tract_vintage
+2026-11-23 21:10:31 [info     ] role_years_nonstandard           ar={'early': 2010, 'mid': 2010, 'late': 2023} az={'early': 2004, 'mid': 2010, 'late': 2023} dc={'early': 2010, 'mid': 2010, 'late': 2023} ma={'early': 2011, 'mid': 2011, 'late': 2023} mi={'early': 2002, 'mid': 2010, 'late': 2021} ms={'early': 2004, 'mid': 2010, 'late': 2023} nh={'early': 2003, 'mid': 2010, 'late': 2023} script=process_tract_vintage
+2026-11-23 21:10:32 [info     ] jobs_role                        jobs=122690390 role=early script=process_tract_vintage tracts=83486
+2026-11-23 21:10:33 [info     ] jobs_role                        jobs=126181818 role=mid script=process_tract_vintage tracts=83656
+2026-11-23 21:10:35 [info     ] jobs_role                        jobs=150622403 role=late script=process_tract_vintage tracts=83766
+2026-11-23 21:10:35 [info     ] merge                            how=inner left_match_rate=0.9194 left_only=6880 left_rows=85395 matched_rows=78515 name=gazetteer_to_cbsa on=['county_fips'] right_match_rate=0.9953 right_only=9 right_rows=1915 script=process_tract_vintage validate=m:1
+2026-11-23 21:10:35 [info     ] shape                            cols=7 data='gazetteer_to_cbsa result' rows=78515 script=process_tract_vintage
+2026-11-23 21:10:35 [info     ] merge                            how=left left_match_rate=0.9973 left_only=119 left_rows=43384 matched_rows=43265 name=tracts_to_jobs on=['tract_geoid'] right_match_rate=0.5161 right_only=40571 right_rows=83836 script=process_tract_vintage validate=1:1
+2026-11-23 21:10:35 [info     ] shape                            cols=10 data='tracts_to_jobs result' rows=43384 script=process_tract_vintage
+2026-11-23 21:10:35 [info     ] sample_share_of_us_jobs          role=mid script=process_tract_vintage share=0.568
+2026-11-23 21:10:36 [info     ] merge                            how=inner left_match_rate=1.0 left_only=0 left_rows=43370 matched_rows=43370 name=units_to_access on=['tract_geoid'] right_match_rate=1.0 right_only=0 right_rows=43370 script=process_tract_vintage validate=1:1
+2026-11-23 21:10:36 [info     ] shape                            cols=116 data='units_to_access result' rows=43370 script=process_tract_vintage
+2026-11-23 21:10:36 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=43370 matched_rows=43370 name=units_to_own_jobs on=['tract_geoid'] right_match_rate=0.9997 right_only=14 right_rows=43384 script=process_tract_vintage validate=1:1
+2026-11-23 21:10:36 [info     ] shape                            cols=119 data='units_to_own_jobs result' rows=43370 script=process_tract_vintage
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.4621330294837781 mean=0.035193 min=0.0 script=process_tract_vintage share_missing=0.0 var=access5_early
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.43657577613113224 mean=0.034766 min=0.0 script=process_tract_vintage share_missing=0.0 var=access5_mid
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.3312797837222845 mean=0.033851 min=0.0 script=process_tract_vintage share_missing=0.0 var=access5_late
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.7550437204191667 mean=0.113501 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_early
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.7078578706377873 mean=0.112156 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_mid
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.6191272623515804 mean=0.109664 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_late
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.9499881571552505 mean=0.317252 min=0.0 script=process_tract_vintage share_missing=0.0 var=access20_early
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.9509307623847548 mean=0.314325 min=0.0 script=process_tract_vintage share_missing=0.0 var=access20_mid
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.960396341654905 mean=0.309994 min=0.0 script=process_tract_vintage share_missing=0.0 var=access20_late
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=0.5937035056562058 mean=0.104891 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_growth
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=99.99986604303447 mean=50.674288 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_early_pctile
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=100.0 mean=50.64119 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_mid_pctile
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=100.0 mean=50.564735 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_late_pctile
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=99.98367503088762 mean=50.409616 min=0.0 script=process_tract_vintage share_missing=0.0 var=access5_mid_pctile
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=99.98980865355065 mean=50.627522 min=0.0 script=process_tract_vintage share_missing=0.0 var=access20_mid_pctile
+2026-11-23 21:10:36 [info     ] variable                         count=43370 max=100.0 mean=50.361269 min=0.0 script=process_tract_vintage share_missing=0.0 var=access10_growth_pctile
+2026-11-23 21:10:37 [info     ] variable                         count=43370 max=100.0 mean=50.988963 min=0.0 script=process_tract_vintage share_missing=0.0 var=dist_center_pctile
+2026-11-23 21:10:37 [info     ] variable                         count=43370 max=274.92515736059653 mean=27.349153 min=0.0 script=process_tract_vintage share_missing=0.0 var=dist_center_km
+2026-11-23 21:10:37 [info     ] wrote                            cols=28 file=data/processed/tract_vintage/tracts.csv rows=43370 script=process_tract_vintage
+2026-11-23 21:10:37 [info     ] wrote                            cols=4 file=data/processed/tract_vintage/tract_vintage.csv rows=433700 script=process_tract_vintage
+2026-11-23 21:10:41 [info     ] wrote                            cols=6 file=data/processed/tract_vintage/tract_structure.csv rows=3122640 script=process_tract_vintage
+2026-11-23 21:10:41 [info     ] wrote                            cols=13 file=data/processed/tract_vintage/metros.csv rows=48 script=process_tract_vintage
+2026-11-23 21:10:41 [info     ] end                              n_metros=48 n_tracts=43370 script=process_tract_vintage

@@ -1,0 +1,7 @@
+2026-11-23 21:10:29 [info     ] start                            script=clean_tract_xwalk
+2026-11-23 21:10:29 [info     ] shape                            cols=30 data='2000-2010 raw' rows=110854 script=clean_tract_xwalk
+2026-11-23 21:10:29 [info     ] shape                            cols=16 data='2010-2020 raw' rows=126450 script=clean_tract_xwalk
+2026-11-23 21:10:30 [info     ] rename                           note='descriptive names for GEOIDs and part measures' script=clean_tract_xwalk
+2026-11-23 21:10:30 [info     ] wrote                            cols=6 file=data/clean/tract_xwalk/tract00_tract10.csv rows=110854 script=clean_tract_xwalk
+2026-11-23 21:10:30 [info     ] wrote                            cols=4 file=data/clean/tract_xwalk/tract10_tract20.csv rows=126450 script=clean_tract_xwalk
+2026-11-23 21:10:30 [info     ] end                              script=clean_tract_xwalk

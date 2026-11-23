@@ -1,0 +1,42 @@
+2026-11-23 22:08:08,698 | INFO    | START run_all.py : 20 steps
+2026-11-23 22:08:08,730 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_acs.py
+2026-11-23 22:08:13,178 | INFO    | DONE data/scripts/cleaning/clean_acs.py
+2026-11-23 22:08:13,178 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_lodes.py
+2026-11-23 22:08:17,860 | INFO    | DONE data/scripts/cleaning/clean_lodes.py
+2026-11-23 22:08:17,860 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_gazetteer.py
+2026-11-23 22:08:18,295 | INFO    | DONE data/scripts/cleaning/clean_gazetteer.py
+2026-11-23 22:08:18,295 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_cbsa.py
+2026-11-23 22:08:18,682 | INFO    | DONE data/scripts/cleaning/clean_cbsa.py
+2026-11-23 22:08:18,682 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_lodes_od.py
+2026-11-23 22:10:28,826 | INFO    | DONE data/scripts/cleaning/clean_lodes_od.py
+2026-11-23 22:10:28,826 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_bsh.py
+2026-11-23 22:10:29,351 | INFO    | DONE data/scripts/cleaning/clean_bsh.py
+2026-11-23 22:10:29,351 | INFO    | RUN [cleaning] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/cleaning/clean_tract_xwalk.py
+2026-11-23 22:10:30,248 | INFO    | DONE data/scripts/cleaning/clean_tract_xwalk.py
+2026-11-23 22:10:30,248 | INFO    | RUN [processing] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/processing/process_tract_vintage.py
+2026-11-23 22:10:41,901 | INFO    | DONE data/scripts/processing/process_tract_vintage.py
+2026-11-23 22:10:41,901 | INFO    | RUN [processing] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/processing/process_tract_commute.py
+2026-11-23 22:11:02,121 | INFO    | DONE data/scripts/processing/process_tract_commute.py
+2026-11-23 22:11:02,122 | INFO    | RUN [processing] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/processing/process_tract_commute_trend.py
+2026-11-23 22:11:32,619 | INFO    | DONE data/scripts/processing/process_tract_commute_trend.py
+2026-11-23 22:11:32,620 | INFO    | RUN [processing] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 data/scripts/processing/process_tract_elasticity.py
+2026-11-23 22:11:33,441 | INFO    | DONE data/scripts/processing/process_tract_elasticity.py
+2026-11-23 22:11:33,441 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/01_analyze_access_by_vintage.py
+2026-11-23 22:11:35,229 | INFO    | DONE empirics/scripts/01_analyze_access_by_vintage.py
+2026-11-23 22:11:35,229 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/02_analyze_jobs_housing_growth.py
+2026-11-23 22:11:36,287 | INFO    | DONE empirics/scripts/02_analyze_jobs_housing_growth.py
+2026-11-23 22:11:36,287 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/03_analyze_structure_type.py
+2026-11-23 22:11:41,468 | INFO    | DONE empirics/scripts/03_analyze_structure_type.py
+2026-11-23 22:11:41,468 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/04_analyze_commute_by_vintage.py
+2026-11-23 22:11:45,097 | INFO    | DONE empirics/scripts/04_analyze_commute_by_vintage.py
+2026-11-23 22:11:45,097 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/05_analyze_elasticity_description.py
+2026-11-23 22:11:46,181 | INFO    | DONE empirics/scripts/05_analyze_elasticity_description.py
+2026-11-23 22:11:46,181 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/06_explore_job_growth_location.py
+2026-11-23 22:11:46,511 | INFO    | DONE empirics/scripts/06_explore_job_growth_location.py
+2026-11-23 22:11:46,511 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/07_analyze_commute_trend.py
+2026-11-23 22:11:46,934 | INFO    | DONE empirics/scripts/07_analyze_commute_trend.py
+2026-11-23 22:11:46,934 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/90_build_tables.py
+2026-11-23 22:11:47,221 | INFO    | DONE empirics/scripts/90_build_tables.py
+2026-11-23 22:11:47,221 | INFO    | RUN [empirics] /Users/fyodorshafranov/Documents/LMU_Life/Possible Research Ideas/housing_supply/.venv/bin/python3 empirics/scripts/91_build_figures.py
+2026-11-23 22:11:48,894 | INFO    | DONE empirics/scripts/91_build_figures.py
+2026-11-23 22:11:48,894 | INFO    | END run_all

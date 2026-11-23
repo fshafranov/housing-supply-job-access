@@ -1,0 +1,11 @@
+2026-11-23 21:11:47 [info     ] start                            script=build_figures
+2026-11-23 21:11:47 [info     ] wrote                            file=empirics/results/figures/fig1_decades.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig2_structure.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig3_metro_gaps.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig4_maps.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig5_commute_structure.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig6_elasticity_access.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig7_elasticity_metros.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig8_jobs_vs_homes_rings.png script=build_figures
+2026-11-23 21:11:48 [info     ] wrote                            file=empirics/results/figures/fig9_commute_trend.png script=build_figures
+2026-11-23 21:11:48 [info     ] end                              figures=9 script=build_figures

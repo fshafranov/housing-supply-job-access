@@ -1,0 +1,21 @@
+2026-11-23 21:11:02 [info     ] start                            script=process_tract_commute_trend
+2026-11-23 21:11:02 [info     ] state_years_nonstandard          ar=2010-2023 az=2004-2023 dc=2010-2023 ma=2011-2023 mi=2002-2021 ms=2004-2023 nh=2003-2023 script=process_tract_commute_trend
+2026-11-23 21:11:02 [info     ] wrote                            cols=3 file=data/processed/tract_commute_trend/state_years.csv rows=50 script=process_tract_commute_trend
+2026-11-23 21:11:07 [info     ] shape                            cols=3 data='early flows' rows=17351573 script=process_tract_commute_trend
+2026-11-23 21:11:07 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=17351573 matched_rows=17351573 name=early_home_coords on=['home_tract'] right_match_rate=0.5051 right_only=42266 right_rows=85395 script=process_tract_commute_trend validate=m:1
+2026-11-23 21:11:07 [info     ] shape                            cols=6 data='early_home_coords result' rows=17351573 script=process_tract_commute_trend
+2026-11-23 21:11:08 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=17351573 matched_rows=17351573 name=early_work_coords on=['work_tract'] right_match_rate=0.9084 right_only=7818 right_rows=85395 script=process_tract_commute_trend validate=m:1
+2026-11-23 21:11:08 [info     ] shape                            cols=8 data='early_work_coords result' rows=17351573 script=process_tract_commute_trend
+2026-11-23 21:11:14 [info     ] role_totals                      resident_jobs=67128549 role=early script=process_tract_commute_trend tracts=43129
+2026-11-23 21:11:21 [info     ] shape                            cols=3 data='late flows' rows=24741956 script=process_tract_commute_trend
+2026-11-23 21:11:22 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=24741956 matched_rows=24741956 name=late_home_coords on=['home_tract'] right_match_rate=0.5069 right_only=42112 right_rows=85395 script=process_tract_commute_trend validate=m:1
+2026-11-23 21:11:22 [info     ] shape                            cols=6 data='late_home_coords result' rows=24741956 script=process_tract_commute_trend
+2026-11-23 21:11:23 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=24741956 matched_rows=24741956 name=late_work_coords on=['work_tract'] right_match_rate=0.9653 right_only=2962 right_rows=85395 script=process_tract_commute_trend validate=m:1
+2026-11-23 21:11:23 [info     ] shape                            cols=8 data='late_work_coords result' rows=24741956 script=process_tract_commute_trend
+2026-11-23 21:11:32 [info     ] role_totals                      resident_jobs=85256324 role=late script=process_tract_commute_trend tracts=43283
+2026-11-23 21:11:32 [info     ] variable                         count=86412 max=4137.420893342339 mean=18.594351 min=0.216216850407178 script=process_tract_commute_trend share_missing=0.0 var=commute_median_km
+2026-11-23 21:11:32 [info     ] variable                         count=86397 max=93.40643192691444 mean=20.143591 min=0.7912072982474316 script=process_tract_commute_trend share_missing=0.0002 var=commute_mean_km_le100
+2026-11-23 21:11:32 [info     ] variable                         count=86412 max=1.0 mean=0.331644 min=0.0 script=process_tract_commute_trend share_missing=0.0 var=commute_share_le10km
+2026-11-23 21:11:32 [info     ] variable                         count=86412 max=1.0 mean=0.072535 min=0.0 script=process_tract_commute_trend share_missing=0.0 var=commute_share_gt100km
+2026-11-23 21:11:32 [info     ] wrote                            cols=9 file=data/processed/tract_commute_trend/tract_commute_trend.csv rows=86412 script=process_tract_commute_trend
+2026-11-23 21:11:32 [info     ] end                              rows=86412 script=process_tract_commute_trend

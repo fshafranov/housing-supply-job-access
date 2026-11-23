@@ -1,0 +1,10 @@
+2026-11-23 21:08:18 [info     ] start                            script=clean_cbsa
+2026-11-23 21:08:18 [info     ] shape                            cols=12 data='raw incl. footnote rows' rows=1918 script=clean_cbsa
+2026-11-23 21:08:18 [info     ] set_aside_footnotes              first=[nan, "Note: The Office of Management and Budget's (OMB's) 2020 Standards for Delineating Core Based Statistical Areas are at <https://www.federalregister.gov/documents/2021/07/16/2021-15159/2020-standards-for-delineating-core-based-statistical-areas>.", 'Source: File prepared by U.S. Census Bureau, Population Division, based on OMB, July 2023 delineations <https://www.whitehouse.gov/wp-content/uploads/2023/07/OMB-Bulletin-23-01.pdf>.'] n_rows=3 script=clean_cbsa
+2026-11-23 21:08:18 [info     ] rename                           new=cbsa_code old='CBSA Code' script=clean_cbsa
+2026-11-23 21:08:18 [info     ] rename                           new=cbsa_title old='CBSA Title' script=clean_cbsa
+2026-11-23 21:08:18 [info     ] rename                           new=central_outlying old='Central/Outlying County' script=clean_cbsa
+2026-11-23 21:08:18 [info     ] rename                           new=state_name old='State Name' script=clean_cbsa
+2026-11-23 21:08:18 [info     ] profile                          n_cbsa=935 n_metro=393 script=clean_cbsa
+2026-11-23 21:08:18 [info     ] wrote                            cols=6 file=data/clean/cbsa/county_cbsa.csv rows=1915 script=clean_cbsa
+2026-11-23 21:08:18 [info     ] end                              script=clean_cbsa

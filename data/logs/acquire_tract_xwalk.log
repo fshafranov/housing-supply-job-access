@@ -1,0 +1,6 @@
+2026-11-23 20:32:31 [info     ] start                            script=acquire_tract_xwalk
+2026-11-23 20:32:31 [info     ] download                         file=tab20_tract20_tract10_natl.txt script=acquire_tract_xwalk url=https://www2.census.gov/geo/docs/maps-data/data/rel2020/tract/tab20_tract20_tract10_natl.txt
+2026-11-23 20:32:33 [info     ] download                         file=us2010trf.txt script=acquire_tract_xwalk url=https://www2.census.gov/geo/docs/maps-data/data/rel/trf_txt/us2010trf.txt
+2026-11-23 20:32:36 [info     ] verified                         bytes=20188306 file=data/raw/tract_xwalk/us2010trf.txt format=txt script=acquire_tract_xwalk
+2026-11-23 20:32:36 [info     ] verified                         bytes=18686287 file=data/raw/tract_xwalk/tab20_tract20_tract10_natl.txt format=txt script=acquire_tract_xwalk
+2026-11-23 20:32:36 [info     ] end                              files_verified=2 script=acquire_tract_xwalk

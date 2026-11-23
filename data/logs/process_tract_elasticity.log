@@ -1,0 +1,33 @@
+2026-11-23 21:11:32 [info     ] start                            script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] shape                            cols=15 data=bsh rows=63897 script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] shape                            cols=6 data=x0010 rows=110854 script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] shape                            cols=4 data=x1020 rows=126450 script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] shape                            cols=28 data=tracts rows=43370 script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] attrition_start                  data='BSH tract x region rows' obs=63897 script=process_tract_elasticity
+2026-11-23 21:11:32 [info     ] attrition                        before=63897 dropped=1 remaining=63896 script=process_tract_elasticity step='no elasticity in source (clean_bsh discrepancies.csv)'
+2026-11-23 21:11:32 [info     ] attrition_summary                dropped=1 final=63896 script=process_tract_elasticity start=63897 table='\n                                                 step  before  dropped  remaining  cumulative_dropped\n                              BSH tract x region rows   63897        0      63897                   0\nno elasticity in source (clean_bsh discrepancies.csv)   63897        1      63896                   1'
+2026-11-23 21:11:32 [info     ] tracts2000_with_elasticity       n=50409 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] merge                            how=left left_match_rate=0.7544 left_only=27222 left_rows=110854 matched_rows=83632 name=tract2000_to_tract2010 on=['tract2000'] right_match_rate=1.0 right_only=0 right_rows=50409 script=process_tract_elasticity validate=m:1
+2026-11-23 21:11:33 [info     ] shape                            cols=11 data='tract2000_to_tract2010 result' rows=110854 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] tracts2010_with_elasticity       n=56850 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] merge                            how=left left_match_rate=0.7465 left_only=32057 left_rows=126450 matched_rows=94393 name=tract2010_to_tract2020 on=['tract2010'] right_match_rate=1.0 right_only=0 right_rows=56850 script=process_tract_elasticity validate=m:1
+2026-11-23 21:11:33 [info     ] shape                            cols=11 data='tract2010_to_tract2020 result' rows=126450 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=43370 matched_rows=43370 name=sample_to_elasticity on=['tract_geoid'] right_match_rate=0.5071 right_only=42158 right_rows=85528 script=process_tract_elasticity validate=1:1
+2026-11-23 21:11:33 [info     ] shape                            cols=12 data='sample_to_elasticity result' rows=43370 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] coverage                         script=process_tract_elasticity share_tracts_full=0.9715 share_units_ge_threshold=0.9728
+2026-11-23 21:11:33 [info     ] attrition_start                  data='sample tracts' obs=43370 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] attrition                        before=43370 dropped=1214 remaining=42156 script=process_tract_elasticity step='less than 50% of the tract covered by BSH tracts (D13)'
+2026-11-23 21:11:33 [info     ] attrition_summary                dropped=1214 final=42156 script=process_tract_elasticity start=43370 table='\n                                                  step  before  dropped  remaining  cumulative_dropped\n                                         sample tracts   43370        0      43370                   0\nless than 50% of the tract covered by BSH tracts (D13)   43370     1214      42156                1214'
+2026-11-23 21:11:33 [info     ] wrote                            cols=13 file=data/processed/tract_elasticity/tract_elasticity_dropped.csv rows=1214 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=1.1452856931596267 mean=0.308763 min=-0.65323627 script=process_tract_elasticity share_missing=0.0 var=elast_units
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=0.9227341798817889 mean=0.15037 min=-0.7045351 script=process_tract_elasticity share_missing=0.0 var=elast_newunits
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=1.181898584299147 mean=0.39468 min=-0.48393157 script=process_tract_elasticity share_missing=0.0 var=elast_floorspace
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=0.4377014972918806 mean=0.06094 min=-0.3702112699999999 script=process_tract_elasticity share_missing=0.0 var=elast_land_dev
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=1.1568986 mean=0.274211 min=-0.23440485 script=process_tract_elasticity share_missing=0.0 var=elast_units_fmm
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=0.8984848 mean=0.395147 min=0.0 script=process_tract_elasticity share_missing=0.0 var=bsh_frac_developed_2011
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=1.0 mean=0.443001 min=0.0 script=process_tract_elasticity share_missing=0.0 var=bsh_frac_flat
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=1.0 mean=0.258743 min=0.0005617203 script=process_tract_elasticity share_missing=0.0 var=bsh_frac_to_edge
+2026-11-23 21:11:33 [info     ] negative_elasticity              script=process_tract_elasticity share_tracts=0.1545
+2026-11-23 21:11:33 [info     ] variable                         count=42156 max=100.0 mean=49.552537 min=0.0 script=process_tract_elasticity share_missing=0.0 var=elast_units_pctile
+2026-11-23 21:11:33 [info     ] wrote                            cols=11 file=data/processed/tract_elasticity/tract_elasticity.csv rows=42156 script=process_tract_elasticity
+2026-11-23 21:11:33 [info     ] end                              metros=48 script=process_tract_elasticity tracts=42156

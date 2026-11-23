@@ -1,0 +1,10 @@
+2026-11-23 19:26:52 [info     ] start                            script=acquire_acs
+2026-11-23 19:26:52 [info     ] present                          file=acsdt5y2023-b25034.dat script=acquire_acs
+2026-11-23 19:26:52 [info     ] present                          file=acsdt5y2023-b25127.dat script=acquire_acs
+2026-11-23 19:26:52 [info     ] download                         file=labels_b25034.json script=acquire_acs url=https://api.census.gov/data/2023/acs/acs5/groups/B25034.json
+2026-11-23 19:26:52 [info     ] download                         file=labels_b25127.json script=acquire_acs url=https://api.census.gov/data/2023/acs/acs5/groups/B25127.json
+2026-11-23 19:26:53 [info     ] verified                         bytes=49971974 file=data/raw/acs/acsdt5y2023-b25034.dat format=txt script=acquire_acs
+2026-11-23 19:26:53 [info     ] verified                         bytes=152409438 file=data/raw/acs/acsdt5y2023-b25127.dat format=txt script=acquire_acs
+2026-11-23 19:26:53 [info     ] verified                         bytes=210332 file=data/raw/acs/labels_b25034.json format=json script=acquire_acs
+2026-11-23 19:26:53 [info     ] verified                         bytes=318566 file=data/raw/acs/labels_b25127.json format=json script=acquire_acs
+2026-11-23 19:26:53 [info     ] end                              files_verified=4 script=acquire_acs

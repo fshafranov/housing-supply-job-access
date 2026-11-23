@@ -1,0 +1,17 @@
+2026-11-23 21:08:08 [info     ] start                            script=clean_acs
+2026-11-23 21:08:09 [info     ] shape                            cols=23 data='B25034 raw (all summary levels)' rows=543541 script=clean_acs
+2026-11-23 21:08:09 [info     ] summary_levels                   counts={'150': 242296, '140': 85381, '060': 36434, '155': 33783, '860': 33772, '160': 32325, '970': 10904, '622': 8463, '612': 5554, '620': 4880, '510': 3836, '430': 3741, '050': 3222, '410': 2772, '269': 2665} script=clean_acs table=B25034
+2026-11-23 21:08:09 [info     ] set_aside_non_tract              n_rows=458160 reason='other summary levels (nation, state, county, ...): not the tract unit' script=clean_acs table=B25034
+2026-11-23 21:08:09 [info     ] leaf_cells_sum_to_total          n_leaves=10 script=clean_acs table=B25034
+2026-11-23 21:08:09 [info     ] shape                            cols=12 data='B25034 clean' rows=85381 script=clean_acs
+2026-11-23 21:08:09 [info     ] totals                           script=clean_acs sum_total=143887407 table=B25034
+2026-11-23 21:08:09 [info     ] wrote                            cols=12 file=data/clean/acs/b25034.csv rows=85381 script=clean_acs
+2026-11-23 21:08:11 [info     ] shape                            cols=175 data='B25127 raw (all summary levels)' rows=299147 script=clean_acs
+2026-11-23 21:08:11 [info     ] summary_levels                   counts={'140': 85381, '060': 36434, '155': 33783, '860': 33772, '160': 32325, '970': 10904, '622': 8463, '612': 5554, '620': 4880, '510': 3836, '430': 3741, '050': 3222, '410': 2772, '269': 2665, '400': 2637} script=clean_acs table=B25127
+2026-11-23 21:08:11 [info     ] set_aside_non_tract              n_rows=213766 reason='other summary levels (nation, state, county, ...): not the tract unit' script=clean_acs table=B25127
+2026-11-23 21:08:12 [info     ] leaf_cells_sum_to_total          n_leaves=72 script=clean_acs table=B25127
+2026-11-23 21:08:12 [info     ] shape                            cols=88 data='B25127 clean' rows=85381 script=clean_acs
+2026-11-23 21:08:12 [info     ] totals                           script=clean_acs sum_total=128702462 table=B25127
+2026-11-23 21:08:13 [info     ] wrote                            cols=88 file=data/clean/acs/b25127.csv rows=85381 script=clean_acs
+2026-11-23 21:08:13 [info     ] wrote                            cols=5 file=data/clean/acs/discrepancies.csv rows=0 script=clean_acs
+2026-11-23 21:08:13 [info     ] end                              script=clean_acs

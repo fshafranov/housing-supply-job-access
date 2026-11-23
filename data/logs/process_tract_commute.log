@@ -1,0 +1,22 @@
+2026-11-23 21:10:42 [info     ] start                            script=process_tract_commute
+2026-11-23 21:10:42 [info     ] od_years                         script=process_tract_commute years={2021: 1, 2023: 49}
+2026-11-23 21:10:48 [info     ] shape                            cols=3 data='home tract x work tract flows' rows=24741956 script=process_tract_commute
+2026-11-23 21:10:48 [info     ] resident_jobs                    home_tracts=43283 jobs=85256324 script=process_tract_commute
+2026-11-23 21:10:49 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=24741956 matched_rows=24741956 name=flows_home_coords on=['home_tract'] right_match_rate=0.5069 right_only=42112 right_rows=85395 script=process_tract_commute validate=m:1
+2026-11-23 21:10:50 [info     ] shape                            cols=6 data='flows_home_coords result' rows=24741956 script=process_tract_commute
+2026-11-23 21:10:51 [info     ] merge                            how=left left_match_rate=1.0 left_only=0 left_rows=24741956 matched_rows=24741956 name=flows_work_coords on=['work_tract'] right_match_rate=0.9653 right_only=2962 right_rows=85395 script=process_tract_commute validate=m:1
+2026-11-23 21:10:51 [info     ] shape                            cols=8 data='flows_work_coords result' rows=24741956 script=process_tract_commute
+2026-11-23 21:10:51 [info     ] work_tract_without_coords        flows=0 jobs=0 reason='work tract not in 2020 Gazetteer; these jobs get no distance' script=process_tract_commute
+2026-11-23 21:10:52 [info     ] same_tract_jobs                  script=process_tract_commute share=0.0279
+2026-11-23 21:10:52 [info     ] variable                         count=24741956 max=8278.779660139135 mean=120.659444 min=0.0615831806791425 script=process_tract_commute share_missing=0.0 var=km
+2026-11-23 21:11:01 [info     ] merge                            how=left left_match_rate=0.998 left_only=87 left_rows=43370 matched_rows=43283 name=sample_to_commutes on=['tract_geoid'] right_match_rate=1.0 right_only=0 right_rows=43283 script=process_tract_commute validate=1:1
+2026-11-23 21:11:01 [info     ] shape                            cols=8 data='sample_to_commutes result' rows=43370 script=process_tract_commute
+2026-11-23 21:11:01 [info     ] tracts_without_resident_jobs     n=87 script=process_tract_commute units=0
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=294.92167610173533 mean=19.643033 min=0.5896594505294026 script=process_tract_commute share_missing=0.002 var=commute_median_km
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=91.13240052501219 mean=20.886782 min=3.554699468194401 script=process_tract_commute share_missing=0.002 var=commute_mean_km_le100
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=0.943127962085308 mean=0.309709 min=0.0 script=process_tract_commute share_missing=0.002 var=commute_share_le10km
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=0.9924882629107982 mean=0.0871 min=0.0 script=process_tract_commute share_missing=0.002 var=commute_share_gt100km
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=100.0 mean=50.539415 min=0.0 script=process_tract_commute share_missing=0.002 var=commute_median_close_pctile
+2026-11-23 21:11:01 [info     ] variable                         count=43283 max=100.0 mean=50.70059 min=0.0 script=process_tract_commute share_missing=0.002 var=commute_mean_close_pctile
+2026-11-23 21:11:01 [info     ] wrote                            cols=8 file=data/processed/tract_vintage/tract_commute.csv rows=43370 script=process_tract_commute
+2026-11-23 21:11:01 [info     ] end                              script=process_tract_commute tracts=43370

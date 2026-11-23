@@ -1,0 +1,6 @@
+2026-11-23 21:08:13 [info     ] start                            script=clean_lodes
+2026-11-23 21:08:15 [info     ] shape                            cols=4 data='raw stacked' rows=6709136 script=clean_lodes
+2026-11-23 21:08:16 [info     ] rename                           new=block_geoid,jobs old=w_geocode,C000 script=clean_lodes
+2026-11-23 21:08:16 [info     ] jobs_by_year                     2002=113851764 2003=583941 2004=3365101 2010=123041521 2011=3140314 2021=4042589 2023=146579814 script=clean_lodes
+2026-11-23 21:08:17 [info     ] wrote                            cols=4 file=data/clean/lodes/wac_blocks.parquet rows=6709136 script=clean_lodes
+2026-11-23 21:08:17 [info     ] end                              script=clean_lodes

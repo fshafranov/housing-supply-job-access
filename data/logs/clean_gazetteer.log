@@ -1,0 +1,10 @@
+2026-11-23 21:08:18 [info     ] start                            script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] shape                            cols=8 data=raw rows=85395 script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] rename                           new=tract_geoid old=GEOID script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] rename                           new=state_abbr old=USPS script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] rename                           new=land_area_m2 old=ALAND script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] rename                           new=lat old=INTPTLAT script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] rename                           new=lon old=INTPTLONG script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] shape                            cols=5 data=clean rows=85395 script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] wrote                            cols=5 file=data/clean/gazetteer/tracts_2020.csv rows=85395 script=clean_gazetteer
+2026-11-23 21:08:18 [info     ] end                              script=clean_gazetteer

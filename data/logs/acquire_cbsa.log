@@ -1,0 +1,4 @@
+2026-11-23 19:25:52 [info     ] start                            script=acquire_cbsa
+2026-11-23 19:25:52 [info     ] download                         file=list1_2023.xlsx script=acquire_cbsa url=https://www2.census.gov/programs-surveys/metro-micro/geographies/reference-files/2023/delineation-files/list1_2023.xlsx
+2026-11-23 19:25:52 [info     ] verified                         bytes=143798 file=data/raw/cbsa/list1_2023.xlsx format=xlsx script=acquire_cbsa
+2026-11-23 19:25:52 [info     ] end                              files_verified=1 script=acquire_cbsa

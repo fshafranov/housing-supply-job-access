@@ -1,0 +1,4 @@
+2026-11-23 19:25:50 [info     ] start                            script=acquire_gazetteer
+2026-11-23 19:25:50 [info     ] download                         file=2020_Gaz_tracts_national.zip script=acquire_gazetteer url=https://www2.census.gov/geo/docs/maps-data/data/gazetteer/2020_Gazetteer/2020_Gaz_tracts_national.zip
+2026-11-23 19:25:51 [info     ] verified                         bytes=2420793 file=data/raw/gazetteer/2020_Gaz_tracts_national.zip format=zip script=acquire_gazetteer
+2026-11-23 19:25:51 [info     ] end                              files_verified=1 script=acquire_gazetteer

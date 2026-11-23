@@ -1,0 +1,23 @@
+2026-11-23 21:10:29 [info     ] start                            script=clean_bsh
+2026-11-23 21:10:29 [info     ] shape                            cols=82 data=raw rows=63897 script=clean_bsh
+2026-11-23 21:10:29 [info     ] labels_used                      Trct_FrcDev_01='Fraction Land Developed, 2001' Trct_FrcDev_11='Fraction Land Developed, 2011' cbdname='Name of CBD associated with region_all' ctracts2000= gamma11a_devl_IV='IV pred., devl, linear spec, 2011' gamma11a_newunits_IV='IV pred., newunits, linear spec, 2011' gamma11a_space_IV='IV pred., space, linear spec, 2011' gamma11a_units_IV='IV pred., units, linear spec, 2011' gamma11b_units_FMM='FMM pred., units, quadratic spec, 2011' lsf_1_flat_plains='Fraction Land Flat' pctdis="Fraction of the way from the region's CBD to the region edge" primary_sample='Estimation sample' region_all='Assigned region code (incl splitting CT and NJ)' script=clean_bsh sd_gamma11a_units_IV='standard deviation of prediction in gamma11a_units_IV' wgt='Tract weight = 1/(# of regions in which the tract appears)'
+2026-11-23 21:10:29 [info     ] rename                           new=tract2000 old=ctracts2000 script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_region old=region_all script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_cbd_name old=cbdname script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_weight old=wgt script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_primary_sample old=primary_sample script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_frac_to_edge old=pctdis script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_frac_flat old=lsf_1_flat_plains script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_frac_developed_2001 old=Trct_FrcDev_01 script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=bsh_frac_developed_2011 old=Trct_FrcDev_11 script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_units old=gamma11a_units_IV script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_units_sd old=sd_gamma11a_units_IV script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_newunits old=gamma11a_newunits_IV script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_floorspace old=gamma11a_space_IV script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_land_dev old=gamma11a_devl_IV script=clean_bsh
+2026-11-23 21:10:29 [info     ] rename                           new=elast_units_fmm old=gamma11b_units_FMM script=clean_bsh
+2026-11-23 21:10:29 [warning  ] discrepancy                      expected=non-missing handling='kept as missing (one tract in source)' n=1 observed=missing script=clean_bsh var=elast_units
+2026-11-23 21:10:29 [info     ] profile                          elast_units_mean=0.2909 rows=63897 script=clean_bsh tracts=50410
+2026-11-23 21:10:29 [info     ] wrote                            cols=15 file=data/clean/bsh/tract_elasticity_2000.csv rows=63897 script=clean_bsh
+2026-11-23 21:10:29 [info     ] wrote                            cols=5 file=data/clean/bsh/discrepancies.csv rows=1 script=clean_bsh
+2026-11-23 21:10:29 [info     ] end                              script=clean_bsh
